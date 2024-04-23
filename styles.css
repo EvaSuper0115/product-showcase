@@ -20,5 +20,8 @@ body {
   border-radius: 20px;
 }
 .card img {
-  height: 80%;
+  height: 80vh;
+}
+h1 {
+  font-size: 2vw;
 }
