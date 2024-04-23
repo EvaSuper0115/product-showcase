@@ -1,5 +1,8 @@
 body {
-  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  background-image: url(./btsBG.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container,
 .card {
@@ -11,16 +14,28 @@ body {
 .card {
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0.15)
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
   );
-  backdrop-filter: blur(3px);
-  width: 80vw;
-  height: 80vh;
-  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 130vh;
 }
-.card img {
+.BTSLogo {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
   height: 80vh;
+}
+.qPosketLogo {
+  position: absolute;
+  opacity: 0.3;
+  z-index: 2;
+  height: 25vh;
+}
+.productImage {
+  height: 80vh;
+  z-index: 3;
 }
 h1 {
   font-size: 2vw;

@@ -3,7 +3,7 @@ const card = document.querySelector(".card");
 const productImage = document.querySelector(".productImage");
 
 //movement mouse sensitive
-card.addEventListener("mousemove", (e) => {
+container.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
   let imageIndex;
   let xAxisPercentage = (xAxis / window.innerWidth) * 100;
@@ -26,8 +26,4 @@ card.addEventListener("mousemove", (e) => {
   }
 
   productImage.src = `./figure_${imageIndex}.PNG`;
-});
-// bounce back to front when mouse leaves card
-card.addEventListener("mouseleave", (e) => {
-  productImage.src = `./figure_front.PNG`;
 });
