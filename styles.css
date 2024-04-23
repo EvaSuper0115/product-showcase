@@ -1,3 +1,6 @@
+body {
+  background: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
 .container,
 .card {
   display: flex;
@@ -6,7 +9,12 @@
   padding: 2em;
 }
 .card {
-  background: pink;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.15)
+  );
+  backdrop-filter: blur(3px);
   width: 80vw;
   height: 80vh;
   border-radius: 20px;

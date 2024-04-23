@@ -6,19 +6,20 @@ const productImage = document.querySelector(".productImage");
 card.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
   let imageIndex;
-
+  let xAxisPercentage = (xAxis / window.innerWidth) * 100;
+  console.log(xAxisPercentage);
   //starting from the left to right
-  if (xAxis < -800) {
+  if (xAxisPercentage < -35) {
     imageIndex = `Left03`;
-  } else if (xAxis < -600) {
+  } else if (xAxisPercentage < -30) {
     imageIndex = `Left02`;
-  } else if (xAxis < -400) {
+  } else if (xAxisPercentage < -25) {
     imageIndex = `Left01`;
-  } else if (xAxis >= -400 && xAxis <= 400) {
+  } else if (xAxisPercentage >= -25 && xAxis <= 25) {
     imageIndex = `front`;
-  } else if (xAxis <= 800) {
+  } else if (xAxisPercentage <= 30) {
     imageIndex = `Right01`;
-  } else if (xAxis <= 1000) {
+  } else if (xAxisPercentage <= 35) {
     imageIndex = `Right02`;
   } else {
     imageIndex = `Right03`;
