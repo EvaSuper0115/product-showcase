@@ -4,13 +4,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.container,
-.card {
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
-  user-select: none;
+padding:4em;
+
 }
 .card {
   background: linear-gradient(
@@ -19,9 +18,18 @@ body {
     rgba(255, 255, 255, 0.277)
   );
   backdrop-filter: blur(8px);
-  width: 50vw;
-  height: 80vh;
+ padding:20px 30px;
+ max-width: 100%;
+ height: auto;
   border-radius: 20px;
+  cursor: grab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  user-select: none;
+  flex-direction: row-reverse;
+  flex-direction: column;
 }
 .BTSLogo {
   position: absolute;
@@ -32,15 +40,54 @@ body {
 .qPosketLogo {
   position: absolute;
   opacity: 0.3;
-  z-index: 2;
-  height: 25vh;
- 
+  z-index: 0;
+  height: 10vh;
+ top:10vh;
+ left:30vw;
 }
 .productImage {
-  height: 80vh;
+  max-width: 30%;
+  height: auto;
   z-index: 3;
+ padding:50px;
  
 }
+.productInfo {
+  padding:50px;
+  max-width: 45%;
+  height: auto;
+}
 h1 {
-  font-size: 2vw;
+  font-size: 3em;
+  font-family: "Rubik Glitch Pop", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+h2{
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h3, h4{
+  font-family: "Poppins", sans-serif;
+  font-weight:400;
+  font-style: normal;
+}
+@media screen and (max-width: 520px){
+  .container{
+    padding:5px;
+  }
+  .card{
+    flex-direction: column;
+    padding:1px;
+  }
+  .productImage{
+    max-width: 90%;
+    padding:5px;
+  }
+  .productInfo{
+    max-width: 90%;
+    padding:5px;
+  }
 }
