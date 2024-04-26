@@ -10,16 +10,18 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2em;
+  user-select: none;
 }
 .card {
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0)
+    rgba(255, 255, 255, 0.609),
+    rgba(255, 255, 255, 0.277)
   );
   backdrop-filter: blur(8px);
-  width: 100%;
-  height: 130vh;
+  width: 50vw;
+  height: 80vh;
+  border-radius: 20px;
 }
 .BTSLogo {
   position: absolute;
@@ -32,10 +34,12 @@ body {
   opacity: 0.3;
   z-index: 2;
   height: 25vh;
+ 
 }
 .productImage {
   height: 80vh;
   z-index: 3;
+ 
 }
 h1 {
   font-size: 2vw;

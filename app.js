@@ -2,12 +2,21 @@ const container = document.querySelector(".container");
 const card = document.querySelector(".card");
 const productImage = document.querySelector(".productImage");
 
-//movement mouse sensitive
-container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
+
+//mouse held to change image
+let mouseHeld = false;
+container.addEventListener("mousedown",(e)=>{
+  mouseHeld = true;
+})
+container.addEventListener("mouseup",(e)=>{
+  mouseHeld=false;
+})
+//combine mouseheld with mousemove to make it draggable
+container.addEventListener("mousemove",(e)=>{
+  if (mouseHeld){ let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
   let imageIndex;
   let xAxisPercentage = (xAxis / window.innerWidth) * 100;
-  console.log(xAxisPercentage);
+ 
   //starting from the left to right
   if (xAxisPercentage < -35) {
     imageIndex = `Left03`;
@@ -26,4 +35,9 @@ container.addEventListener("mousemove", (e) => {
   }
 
   productImage.src = `./figure_${imageIndex}.PNG`;
-});
+ 
+ }
+  
+})
+
+
