@@ -5,15 +5,22 @@ const productImage = document.querySelector(".productImage");
 
 //mouse held to change image
 let mouseHeld = false;
+let isTouching = false;
 container.addEventListener("mousedown",(e)=>{
   mouseHeld = true;
 })
 container.addEventListener("mouseup",(e)=>{
   mouseHeld=false;
 })
+container.addEventListener("touchstart",(e)=>{
+  isTouching = true;
+})
+container.addEventListener("touchend",(e)=>{
+  isTouching = false;
+})
 //combine mouseheld with mousemove to make it draggable
 container.addEventListener("mousemove",(e)=>{
-  if (mouseHeld){ let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
+  if (mouseHeld||isTouching){ let xAxis = (window.innerWidth / 2 - e.pageX) / -1;
   let imageIndex;
   let xAxisPercentage = (xAxis / window.innerWidth) * 100;
  
