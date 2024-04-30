@@ -14,9 +14,11 @@ container.addEventListener("mouseup",(e)=>{
 })
 container.addEventListener("touchstart",(e)=>{
   isTouching = true;
+  console.log("touching");
 })
 container.addEventListener("touchend",(e)=>{
   isTouching = false;
+  console.log("not touching");
 })
 //combine mouseheld with mousemove to make it draggable
 container.addEventListener("mousemove",(e)=>{
